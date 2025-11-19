@@ -38,7 +38,7 @@ export default async function ProductPage({
             <div className="mb-6 text-2xl font-bold text-black">
               ${product.price} {product.currency}
             </div>
-            
+
             <p className="mb-8 text-gray-600 leading-relaxed">{product.description}</p>
 
             <div className="mt-auto">

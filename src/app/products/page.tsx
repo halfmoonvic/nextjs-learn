@@ -19,7 +19,7 @@ export default async function ProductsPage({
       <Navbar />
       <main className="container mx-auto px-4 py-8">
         <h1 className="mb-8 text-3xl font-bold text-gray-900">All Products</h1>
-        
+
         {products.length === 0 ? (
            <div className="mt-12 text-center text-gray-500">No products found.</div>
         ) : (
@@ -29,7 +29,7 @@ export default async function ProductsPage({
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
-            
+
             <div className="mt-8 flex justify-center">
               <Pagination totalPages={totalPages} />
             </div>
