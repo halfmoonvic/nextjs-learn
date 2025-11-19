@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Navbar from '@/components/ui/navbar';
 import ProductCard from '@/components/ui/product-card';
 import { fetchProducts } from '@/lib/data';
+import { Button } from '@/components/ui/button';
 
 export default async function Home() {
   // Fetch first 3 products for the featured section
@@ -21,12 +22,11 @@ export default async function Home() {
           <p className="mb-8 text-lg text-gray-300 md:text-xl">
             Discover the latest trends in footwear and fashion.
           </p>
-          <Link
-            href="/products"
-            className="inline-block rounded-full bg-white px-8 py-3 text-lg font-bold text-black transition-colors hover:bg-gray-200"
-          >
-            Shop Now
-          </Link>
+          <Button asChild size="lg" className="rounded-full text-lg font-bold">
+            <Link href="/products">
+              Shop Now
+            </Link>
+          </Button>
         </div>
       </section>
 
